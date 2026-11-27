@@ -106,7 +106,7 @@
 .summary-side > .btn-big { justify-self: stretch; }
 
 /* ---------- winner ---------- */
-.winner { display: grid; gap: 1rem; }
+.winner { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
 .winner .panel + .panel { margin-top: 0; }
 .winner-hero { text-align: center; }
 .winner-hero h2 { font-size: 2rem; }

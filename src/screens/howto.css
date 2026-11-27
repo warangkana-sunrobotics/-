@@ -1,4 +1,4 @@
-.howto { max-width: 860px; margin: 0 auto; padding: 16px; display: grid; gap: 1rem; }
+.howto { max-width: 860px; margin: 0 auto; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
 .howto-head { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .howto-head h1 { margin: 0; font-size: clamp(1.4rem, 4vw, 2rem); }
 .howto h2 { font-size: 1.25rem; color: #b05a3f; }
