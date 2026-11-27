@@ -1,0 +1,70 @@
+.resource-bar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.res-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.res-icon { font-size: 1.05em; }
+.res-value { font-family: var(--font-head); font-weight: 600; }
+.res-label { color: var(--ink-soft); font-size: 0.85em; }
+.res-bad { border-color: var(--bad); }
+.res-bad .res-value { color: var(--bad); }
+.res-good .res-value { color: var(--good); }
+.resource-bar.compact .res-item { font-size: 0.82rem; padding: 0 0.45rem; }
+
+.player-list ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.player-list-title { font-size: 1.05rem; }
+.player-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  padding: 0.45rem 0.6rem;
+}
+.player-row.current { outline: 2px solid var(--accent); }
+.player-row-main { flex: 1; min-width: 0; display: grid; gap: 0.25rem; }
+.player-row-name { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.player-row-char { color: var(--ink-soft); font-size: 0.9em; }
+
+.portrait {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--line);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.badge-first { border-color: var(--warn); background: #fdecc8; color: var(--ink); font-weight: 600; }
+.badge-done { border-color: var(--good); color: var(--good); font-weight: 600; }
+.badge-wait { color: var(--ink-soft); }
