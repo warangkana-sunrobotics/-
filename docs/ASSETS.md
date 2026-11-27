@@ -17,6 +17,10 @@
 | `assets/incoming/8.webp` | การ์ดตัวละคร น้ำ | `public/assets/cards/nam.webp` |
 | `assets/incoming/9.webp` | การ์ดตัวละคร ฟาง | `public/assets/cards/fang.webp` |
 | `assets/incoming/10.webp` | การ์ดตัวละคร ลุงชัย | `public/assets/cards/lung-chai.webp` |
+| `assets/incoming/11.webp` | การ์ดตัวละคร มะนาว | `public/assets/cards/manao.webp` |
+| `assets/incoming/12.webp` | การ์ดตัวละคร ป้านิด | `public/assets/cards/pa-nid.webp` |
+| `assets/incoming/13.webp` | การ์ดตัวละคร ต้น | `public/assets/cards/ton.webp` |
+| `assets/incoming/14.webp` | การ์ดตัวละคร เมฆ | `public/assets/cards/mek.webp` |
 
 การ์ดอีก 9 ตัว (`manao`, `pa-nid`, `ton`, `fang`, `lung-chai`, `kaew`, `mek`, `pete`, `nam`) ผู้ใช้ส่งมาในแชตแล้วแต่ยังไม่มีไฟล์ในโปรเจกต์ —
 ระหว่างนี้ `available: false` และ UI แสดงการ์ดตัวแทน (สี + ชื่อย่อ)

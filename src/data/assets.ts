@@ -20,7 +20,9 @@ export const MAP_IMAGES: Record<MapId, ImageAsset> = {
 };
 
 /** ตัวละครที่มีไฟล์การ์ดใน public/assets/cards แล้ว — เพิ่ม id ที่นี่เมื่อวางไฟล์ใหม่ */
-const AVAILABLE_CARDS: ReadonlySet<CharacterId> = new Set<CharacterId>(['yai-on', 'pete', 'kaew', 'nam', 'fang', 'lung-chai']);
+const AVAILABLE_CARDS: ReadonlySet<CharacterId> = new Set<CharacterId>([
+  'manao', 'pa-nid', 'ton', 'fang', 'lung-chai', 'kaew', 'mek', 'yai-on', 'pete', 'nam',
+]);
 
 const CHARACTER_IDS: CharacterId[] = [
   'manao',
