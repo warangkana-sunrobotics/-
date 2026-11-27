@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { GameSetup, GameState } from './game/types';
 import { createGame } from './game/engine';
 import { clearGame, loadGame, saveGame } from './storage';
@@ -9,10 +9,30 @@ import { GameScreen } from './screens/game/GameScreen';
 
 type Screen = 'home' | 'howto' | 'setup' | 'game';
 
+const IN_GAME_KEY = 'sinduean.inGame';
+function wasInGame(): boolean {
+  try {
+    return sessionStorage.getItem(IN_GAME_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+function markInGame(v: boolean): void {
+  try {
+    if (v) sessionStorage.setItem(IN_GAME_KEY, '1');
+    else sessionStorage.removeItem(IN_GAME_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
 export default function App() {
-  const [screen, setScreen] = useState<Screen>('home');
-  const [game, setGame] = useState<GameState | null>(null);
+  // รีโหลดในแท็บเดิมระหว่างเล่น → กลับเข้าเกมจากเซฟทันที (กลับไปหน้าส่งต่อถ้าค้างอยู่ช่วงวางแผน)
+  const [game, setGame] = useState<GameState | null>(() => (wasInGame() ? loadGame() : null));
+  const [screen, setScreen] = useState<Screen>(() => (game ? 'game' : 'home'));
   const [hasSave, setHasSave] = useState(() => loadGame() !== null);
+
+  useEffect(() => markInGame(screen === 'game'), [screen]);
 
   // ทุกการเปลี่ยนสถานะเกมผ่านที่นี่ → เซฟทันที
   const update = useCallback((s: GameState) => {
