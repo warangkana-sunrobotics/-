@@ -11,7 +11,12 @@
 | `assets/incoming/2.webp` | แผนที่ เมืองริมคลอง (1536×1024) | `public/assets/maps/canal.webp` |
 | `assets/incoming/3.webp` | แผนที่ สี่ย่านรอบสวน (1536×1024) | `public/assets/maps/park.webp` |
 | `assets/incoming/4.webp` | แผนที่ เมืองเนินเขา (1536×1024) | `public/assets/maps/hill.webp` |
-| `assets/incoming/5.webp` | การ์ดตัวละคร ยายอ้อน | `public/assets/cards/yai-on.webp` |
+| `assets/incoming/5.webp` | การ์ดตัวละคร ยายอร | `public/assets/cards/yai-on.webp` |
+| `assets/incoming/6.webp` | การ์ดตัวละคร พีท | `public/assets/cards/pete.webp` |
+| `assets/incoming/7.webp` | การ์ดตัวละคร แก้ว | `public/assets/cards/kaew.webp` |
+| `assets/incoming/8.webp` | การ์ดตัวละคร น้ำ | `public/assets/cards/nam.webp` |
+| `assets/incoming/9.webp` | การ์ดตัวละคร ฟาง | `public/assets/cards/fang.webp` |
+| `assets/incoming/10.webp` | การ์ดตัวละคร ลุงชัย | `public/assets/cards/lung-chai.webp` |
 
 การ์ดอีก 9 ตัว (`manao`, `pa-nid`, `ton`, `fang`, `lung-chai`, `kaew`, `mek`, `pete`, `nam`) ผู้ใช้ส่งมาในแชตแล้วแต่ยังไม่มีไฟล์ในโปรเจกต์ —
 ระหว่างนี้ `available: false` และ UI แสดงการ์ดตัวแทน (สี + ชื่อย่อ)
