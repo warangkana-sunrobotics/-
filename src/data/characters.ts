@@ -5,7 +5,8 @@ import type { Character, CharacterId } from '../game/types';
  * card: path ใต้ public — ถ้าไฟล์ยังไม่มี CharacterCard จะแสดงการ์ดตัวแทนเมื่อโหลดภาพไม่ได้
  * color: สีตัวเดิน เลือกให้ตัดกับตัวอักษรสีขาวชัดเจน (contrast ≥ 4.5:1)
  */
-const card = (id: CharacterId) => `assets/cards/${id}.webp`;
+import { cardImage } from './assets';
+const card = (id: CharacterId) => cardImage(id);
 
 export const CHARACTERS: Character[] = [
   {
