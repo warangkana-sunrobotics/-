@@ -1,0 +1,76 @@
+.setup { max-width: 1100px; margin: 0 auto; padding: 1rem 16px 3rem; }
+.setup-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.setup-steps { margin: 0; font-family: var(--font-head); color: var(--ink-soft); }
+.setup-dots { display: flex; gap: 0.35rem; list-style: none; padding: 0; margin: 0.6rem 0 1rem; flex-wrap: wrap; }
+.setup-dots li { width: 1.6rem; height: 0.4rem; border-radius: 999px; background: var(--line); }
+.setup-dots li.is-done { background: var(--accent-2); }
+.setup-dots li.is-current { background: var(--accent); }
+
+.setup-section { background: var(--paper); border: 2px solid var(--line); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); }
+.setup-section h2:focus { outline: none; }
+.setup-section h2:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.setup-section h3 { margin-top: 1.2rem; }
+
+.setup-count-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 0.6rem; }
+.setup-count,
+.setup-map {
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+.setup-count { display: flex; flex-direction: column; align-items: center; padding: 0.6rem 0.4rem; }
+.setup-count-num { font-family: var(--font-head); font-size: 1.8rem; line-height: 1.1; }
+.setup-count-unit { font-size: 0.85rem; color: var(--ink-soft); }
+.setup-count:hover,
+.setup-map:hover { border-color: var(--accent); }
+.setup-count.is-selected,
+.setup-map.is-selected { border-color: var(--accent); background: #fdebe4; box-shadow: 0 0 0 3px var(--accent); }
+
+.setup-note { margin-top: 1rem; color: var(--ink-soft); }
+
+.setup-map-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.8rem; }
+.setup-map { display: flex; flex-direction: column; text-align: left; padding: 0; overflow: hidden; }
+.setup-map-thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--line); display: block; }
+.setup-map-name { font-family: var(--font-head); font-size: 1.1rem; padding: 0.5rem 0.7rem 0; }
+.setup-map-desc { font-size: 0.9rem; color: var(--ink-soft); padding: 0 0.7rem 0.7rem; }
+
+.setup-field { display: flex; flex-direction: column; gap: 0.25rem; max-width: 360px; }
+.setup-field label { font-family: var(--font-head); }
+.setup-input { padding: 0.5rem 0.75rem; border: 2px solid var(--line); border-radius: 10px; background: #fff; }
+.setup-input:focus { border-color: var(--focus); }
+
+.setup-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.7rem; }
+@media (max-width: 480px) {
+  .setup-card-grid { grid-template-columns: repeat(2, 1fr); }
+  .setup-map-grid { grid-template-columns: 1fr; }
+}
+
+.setup-board { width: 100%; }
+.setup-hint { color: var(--ink-soft); margin: 0.2rem 0 0.5rem; font-size: 0.95rem; }
+.setup-home { margin: 0.6rem 0 0; }
+.setup-muted { color: var(--ink-soft); }
+.setup-error { color: var(--bad); font-weight: 600; margin: 0.4rem 0; }
+ul.setup-error { padding-left: 1.2rem; }
+
+.setup-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.75rem; margin-top: 1.2rem; }
+.setup-actions .setup-hint { margin: 0; margin-right: auto; }
+
+.setup-summary { list-style: none; padding: 0; margin: 0.8rem 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.setup-summary-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border: 2px solid var(--line); border-radius: var(--radius); background: #fff; }
+.setup-summary-text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.setup-summary-text span { color: var(--ink-soft); font-size: 0.92rem; }
+.setup-pawn {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--ink);
+}
+.setup-edit { padding: 0.3em 0.9em; }
