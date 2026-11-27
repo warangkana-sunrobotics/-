@@ -66,7 +66,7 @@ export interface Character {
   /** path ใต้ public ของภาพการ์ด หรือ null ถ้ายังไม่มีภาพ (ใช้การ์ดตัวแทน) */
   card: string | null;
   color: string; // สีตัวเดิน (hex)
-  initials: string; // ชื่อย่อ 1–2 ตัวอักษรบนตัวเดิน
+  initials: string; // ชื่อย่อสั้น ๆ (≤3 อักษรที่มองเห็น) บนตัวเดิน
 }
 
 // ---------- ผู้เล่น ----------
